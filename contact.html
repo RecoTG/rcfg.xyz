@@ -1,31 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="assets/images/favicon.png" type="image/png"/><meta charset="UTF-8"/><title>RCFG | Contact</title><link rel="stylesheet" href="assets/css/style.css"/></head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RCFG | Contact</title>
+  <link rel="icon" href="assets/images/favicon.png" type="image/png"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
 <body>
-
-<aside class="server-sidebar">
-  <button class="sidebar-close" aria-label="Close Server Status">×</button>
-  <h2>Game Server Status</h2>
-  <ul class="server-list">
-    <li><span class="status-indicator running"></span><strong>Minecraft</strong><br/>mc.rcfg.xyz<br/>Version: 1.21.6</li>
-    <li><span class="status-indicator running"></span><strong>Arma Reforger</strong><br/>arma.rcfg.xyz<br/>Version: latest</li>
-    <li><span class="status-indicator running"></span><strong>Counter Strike 2</strong><br/>46.4.224.70:27015<br/>Version: latest</li>
-    <li><span class="status-indicator crashed"></span><strong>Garry's Mod</strong><br/>gmod.rcfg.xyz<br/>Version: TBD</li>
-    <li><span class="status-indicator crashed"></span><strong>Unturned</strong><br/>TBD</li>
-    <li><span class="status-indicator crashed"></span><strong>Minecraft Modded</strong><br/>TBD</li>
-    <li><span class="status-indicator crashed"></span><strong>Counter Strike Source</strong><br/>TBD</li>
-  </ul>
-</aside>
-
-
-
-
-  
   <header>
-  <img src="assets/images/oie_transparent.png" class="logo" alt="RCFG Logo"/>
-  
-
+    <img src="assets/images/oie_transparent.png" class="logo" alt="RCFG Logo"/>
+    
 <nav>
   <button class="nav-btn" onclick="location.href='index.html'">Home</button>
   <button class="nav-btn" onclick="location.href='pricing.html'">Pricing</button>
@@ -37,10 +21,8 @@
   <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
 </nav>
 
-
-</header>
-  <main class="with-sidebar">
-  <section class="page-section">
+  </header>
+  <main class="page-section">
     <h1>Contact Us</h1>
     <form action="mailto:your@email.com" method="POST" enctype="text/plain">
       <input type="text" name="name" placeholder="Your Name" required>
@@ -48,50 +30,9 @@
       <textarea name="message" placeholder="Your message" rows="5" required></textarea>
       <button type="submit">Send</button>
     </form>
-    </section>
-</main>
-  
-<footer>
-  <a href="documentation.html">View Documentation</a>
-  <p>&copy; 2025 RCFG Hosting & Services. All rights reserved.</p>
-</footer>
-
-
-
-
-
-<script>
-  window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    if(preloader) preloader.style.display = 'none';
-  });
-</script>
-
-
-<script>
-  // Theme toggle
-  const toggleBtn = document.getElementById('theme-toggle');
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('light-mode');
-      toggleBtn.textContent = document.body.classList.contains('light-mode') ? '🌞' : '🌙';
-    });
-  }
-  // Remove preloader when page loads
-  window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    if (preloader) preloader.style.display = 'none';
-  });
-</script>
-
-
-<script>
-  document.querySelectorAll('.sidebar-close').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.parentElement.style.display = 'none';
-    });
-  });
-</script>
-
+  </main>
+  <footer>
+    <a href="documentation.html">View Documentation</a><p>&copy; 2025 RCFG Hosting & Services. All rights reserved.</p>
+  </footer>
 </body>
 </html>
