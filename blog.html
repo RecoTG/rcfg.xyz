@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <link rel="icon" href="assets/images/favicon.png" type="image/png"/><meta charset="UTF-8"/><title>RCFG | Blog</title><link rel="stylesheet" href="assets/css/style.css"/></head>
+<body>
+
+<aside class="server-sidebar">
+  <button class="sidebar-close" aria-label="Close Server Status">×</button>
+  <h2>Game Server Status</h2>
+  <ul class="server-list">
+    <li><span class="status-indicator running"></span><strong>Minecraft</strong><br/>mc.rcfg.xyz<br/>Version: 1.21.6</li>
+    <li><span class="status-indicator running"></span><strong>Arma Reforger</strong><br/>arma.rcfg.xyz<br/>Version: latest</li>
+    <li><span class="status-indicator running"></span><strong>Counter Strike 2</strong><br/>46.4.224.70:27015<br/>Version: latest</li>
+    <li><span class="status-indicator crashed"></span><strong>Garry's Mod</strong><br/>gmod.rcfg.xyz<br/>Version: TBD</li>
+    <li><span class="status-indicator crashed"></span><strong>Unturned</strong><br/>TBD</li>
+    <li><span class="status-indicator crashed"></span><strong>Minecraft Modded</strong><br/>TBD</li>
+    <li><span class="status-indicator crashed"></span><strong>Counter Strike Source</strong><br/>TBD</li>
+  </ul>
+</aside>
+
+
+
+
+
+
+
+  
+  <header>
+  <img src="assets/images/oie_transparent.png" class="logo" alt="RCFG Logo"/>
+  
+
+<nav>
+  <button class="nav-btn" onclick="location.href='index.html'">Home</button>
+  <button class="nav-btn" onclick="location.href='pricing.html'">Pricing</button>
+  <button class="nav-btn" onclick="location.href='contact.html'">Contact</button>
+  <button class="nav-btn" onclick="window.open('https://github.com/RCFG-HS', '_blank')">Docs</button>
+  <button class="nav-btn" onclick="location.href='blog.html'">Blog</button>
+  <button class="nav-btn" onclick="location.href='status.html'">Server Status</button>
+  <button class="nav-btn" onclick="window.open('https://panel.rcfg.xyz', '_blank')">Panel</button>
+  <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
+</nav>
+
+
+</header>
+  <main class="with-sidebar">
+  <section class="page-section">
+    <h1>RCFG Blog & Announcements</h1>
+    <div class="social-feeds">
+      <div class="x-feed"><a class="twitter-timeline" data-height="400" href="https://twitter.com/rtgms_">Tweets from RTGMS</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+      
+    
+    <section class="server-status page-section">
+      <h2>Game Server Status</h2>
+      <ul class="status-list">
+        <li>
+          <h3>Minecraft</h3>
+          <p><a href="https://mc.rcfg.xyz" target="_blank">mc.rcfg.xyz</a></p>
+          <p>Version: 1.21.6</p>
+        </li>
+        <li>
+          <h3>Arma Reforger</h3>
+          <p><a href="http://arma.rcfg.xyz:2001" target="_blank">arma.rcfg.xyz:2001</a></p>
+          <p>Status: Latest</p>
+        </li>
+        <li>
+          <h3>Counter Strike 2</h3>
+          <p>46.4.224.70:27015</p>
+          <p>Status: Latest</p>
+        </li>
+        <li>
+          <h3>Garry's Mod</h3>
+          <p><a href="http://gmod.rcfg.xyz" target="_blank">gmod.rcfg.xyz</a></p>
+          <p>IP: TBD</p>
+        </li>
+        <li>
+          <h3>Unturned</h3>
+          <p>Same as Garry's Mod</p>
+        </li>
+        <li>
+          <h3>Minecraft Modded</h3>
+          <p>Same as Garry's Mod</p>
+        </li>
+        <li>
+          <h3>Counter-Strike: Source</h3>
+          <p>Same as Garry's Mod</p>
+        </li>
+      </ul>
+    </section>
+</div>
+    </section>
+</main>
+  
+<footer>
+  <a href="documentation.html">View Documentation</a>
+  <p>&copy; 2025 RCFG Hosting & Services. All rights reserved.</p>
+</footer>
+
+
+
+
+
+<script>
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if(preloader) preloader.style.display = 'none';
+  });
+</script>
+
+
+<script>
+  // Theme toggle
+  const toggleBtn = document.getElementById('theme-toggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      toggleBtn.textContent = document.body.classList.contains('light-mode') ? '🌞' : '🌙';
+    });
+  }
+  // Remove preloader when page loads
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) preloader.style.display = 'none';
+  });
+</script>
+
+
+<script>
+  document.querySelectorAll('.sidebar-close').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.parentElement.style.display = 'none';
+    });
+  });
+</script>
+
+</body>
+</html>

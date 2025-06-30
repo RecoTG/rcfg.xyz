@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="assets/images/favicon.png" type="image/png"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RCFG | Home</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+
+
+
+  <div id="preloader"><div class="spinner"></div></div>
+  <header>
+  <img src="assets/images/oie_transparent.png" class="logo" alt="RCFG Logo"/>
+  
+
+<nav>
+  <button class="nav-btn" onclick="location.href='index.html'">Home</button>
+  <button class="nav-btn" onclick="location.href='pricing.html'">Pricing</button>
+  <button class="nav-btn" onclick="location.href='contact.html'">Contact</button>
+  <button class="nav-btn" onclick="window.open('https://github.com/RCFG-HS', '_blank')">Docs</button>
+  <button class="nav-btn" onclick="location.href='blog.html'">Blog</button>
+  <button class="nav-btn" onclick="location.href='status.html'">Server Status</button>
+  <button class="nav-btn" onclick="window.open('https://panel.rcfg.xyz', '_blank')">Panel</button>
+  <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
+</nav>
+
+
+</header>
+  <main>
+    <section class="hero">
+      <img src="assets/images/logobg.png" class="hero-bg" alt="Background Logo"/>
+      <div class="hero-text">
+        <h1>RCFG Hosting & Services</h1>
+        <p>Game servers, custom plugins, bots, and coding made for you.</p>
+        <a href="https://discord.gg/rcfg" class="btn" target="_blank">Join Discord</a>
+      </div>
+    </section>
+    <section class="portfolio">
+      <h2>Previous Work</h2>
+      <div class="work-items">
+        <div class="work-item"><a href="https://x.com/KingHaiX" target="_blank">HaiX</a></div>
+        <div class="work-item"><a href="https://x.com/dima_wallhacks" target="_blank">Dima_wallhacks</a></div>
+        <div class="work-item">Content Creators</div>
+      </div>
+    </section>
+    <section class="testimonials">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-item">
+        <blockquote>“Awesome support and custom work.”<br>- Dima_wallhacks / dima productions</blockquote>
+      </div>
+      <div class="testimonial-item">
+        <blockquote>“Incredible server setups and plugins.”<br>- HaiX</blockquote>
+      </div>
+    </section>
+    
+<section class="news">
+      <h2>News & Updates</h2>
+      <div class="social-feeds">
+        <div class="x-feed">
+          <a class="twitter-timeline" data-height="400" href="https://twitter.com/rtgms_">Tweets from RTGMS</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        
+      </div>
+    </section>
+  </main>
+  
+<footer>
+  <a href="documentation.html">View Documentation</a>
+  <p>&copy; 2025 RCFG Hosting & Services. All rights reserved.</p>
+</footer>
+
+  
+
+
+<script>
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if(preloader) preloader.style.display = 'none';
+  });
+</script>
+
+
+<script>
+  // Theme toggle
+  const toggleBtn = document.getElementById('theme-toggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      toggleBtn.textContent = document.body.classList.contains('light-mode') ? '🌞' : '🌙';
+    });
+  }
+  // Remove preloader when page loads
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) preloader.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
