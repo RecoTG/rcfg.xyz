@@ -543,3 +543,162 @@ aside.server-sidebar {
 .page-section.server-stopped { border-left: 8px solid #ff0; }
 .page-section.server-crashed { border-left: 8px solid #f00; }
 .page-section.server-latest { border-left: 8px solid #00aaff; }
+
+
+/* Name labels under profile pictures */
+.work-item .work-name {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+
+/* Team section styling */
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.team-member {
+  background-color: var(--card-color);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.team-member img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+.team-member h3 {
+  margin: 0.5rem 0;
+  color: var(--btn-color);
+}
+.team-member p {
+  margin: 0.3rem 0;
+}
+.team-member a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+.team-member a:hover {
+  text-decoration: underline;
+}
+
+
+/* Team section styling */
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.team-member {
+  background-color: var(--card-color);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.team-member img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+.team-member h3 {
+  margin: 0.5rem 0;
+  color: var(--btn-color);
+}
+.team-member p {
+  margin: 0.3rem 0;
+}
+.team-member a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+.team-member a:hover {
+  text-decoration: underline;
+}
+
+
+/* Team section enhancements */
+.team-member img {
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+.member-title {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin: 0.3rem 0 0.8rem;
+}
+.link-box {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--btn-color);
+  border-radius: 5px;
+  margin: 0.2rem;
+}
+.link-box a {
+  color: var(--btn-color);
+  text-decoration: none;
+}
+.link-box a:hover {
+  text-decoration: underline;
+}
+
+
+/* Button style for team links */
+.link-btn {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--btn-color);
+  border: 2px solid var(--btn-color);
+  border-radius: 5px;
+  padding: 0.4rem 0.8rem;
+  margin: 0.3rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+.link-btn:hover {
+  background-color: var(--btn-color);
+  color: var(--text-color);
+}
+
+
+/* Team links container */
+.team-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+
+/* Ensure link-btn styles for team buttons */
+.link-btn {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--btn-color);
+  border: 2px solid var(--btn-color);
+  border-radius: 5px;
+  padding: 0.4rem 0.8rem;
+  margin: 0.3rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.link-btn:hover {
+  background-color: var(--btn-color);
+  color: var(--text-color);
+}
