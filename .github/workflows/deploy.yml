@@ -1,35 +1,30 @@
-name: Build & Deploy rcfg.xyz
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
 
-      # Zip the site
-      - name: Archive site
-        run: zip -r site.zip .
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
 
-      # Copy the ZIP to your server
-      - name: Upload to server
-        uses: appleboy/scp-action@v0.1.0
-        with:
-          host: ${{ secrets.SERVER_IP }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
-          source: "site.zip"
-          target: "/tmp/"
+    - name: Build (if you have NPM scripts)
+      run: |
+        npm ci
+        npm run build   # adjust if you have a build step
 
-      # SSH in and run your deploy script
-      - name: Deploy
-        uses: appleboy/ssh-action@v0.1.0
-        with:
-          host: ${{ secrets.SERVER_IP }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
-          script: |
-            sudo /root/deploy_rcfg.sh
+    - name: Deploy to Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./   # or ./dist if you build into a subfolder
