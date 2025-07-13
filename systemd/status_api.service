@@ -1,0 +1,11 @@
+[Unit]
+Description=RCFG Game Status API
+
+[Service]
+ExecStart=/usr/local/bin/uvicorn status_api:app --host 127.0.0.1 --port 5000
+WorkingDirectory=/var/www/rcfg_site
+User=www-data
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,70 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>RCFG Hosting & Services — Status</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/custom.css">
-
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="shortcut icon" type="image/png" href="favicon.png">
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TW684LSV8D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TW684LSV8D');
-</script>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RCFG Hosting & Services</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/style.css" rel="stylesheet">
 </head>
-<body class="bg-dark text-light" class="bg-dark text-light">
-
-
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="assets/img/oie_transparent.png" alt="Logo" style="height:40px;">
-      <span class="ms-2 text-white">RCFG Hosting & Services</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/"><img src="/assets/img/logo.png" alt="Logo" style="height:32px;"> <span class="text-white">RCFG Hosting & Services</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" id="navCollapse">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
-        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-        <li class="nav-item"><a class="nav-link" href="status.html">Status</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://panel.rcfg.xyz" target="_blank">Panel</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="/team.html">Team</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="/pricing.html">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="/status.html">Status</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="https://panel.rcfg.xyz">Panel</a></li>
       </ul>
     </div>
   </div>
 </nav>
-
-
-
-<main class="container py-5">
 <section class="container py-5">
-  <h2 class="display-4 fw-bold mb-4 text-info">Server Status</h2>
-  <div class="alert alert-info">Status dashboard coming soon!</div>
+  <h2 class="text-white mb-4">Game Servers <small class="text-muted ms-3" id="gs-summary"></small></h2> <small class="text-muted ms-3" id="gs-summary"></small><div class="card p-3 mb-5">
+    <div class="table-responsive">
+      <table class="table table-borderless mb-0">
+        <thead>
+          <tr>
+            <th>Server</th><th>Status</th><th>Players</th><th>Map</th><th>Join Server</th>
+          </tr>
+        </thead>
+        
+<tbody id="gs-rows">
+  <tr id="row-minecraft">
+    <td><strong>Minecraft</strong><br><small class="text-muted">mc.rcfg.xyz</small></td>
+    <td id="status-minecraft"><button class="btn btn-secondary btn-sm">Unknown</button></td>
+    <td id="players-minecraft"><div class="d-flex align-items-center"><span class="me-2">0/0</span><div class="progress flex-grow-1"><div class="progress-bar" style="width:0%;"></div></div></div></td>
+    <td id="map-minecraft">-</td>
+    <td><button class="btn btn-primary btn-sm connect-btn" data-ip="mc.rcfg.xyz">Connect</button></td>
+  </tr>
+  <tr id="row-craftoria">
+    <td><strong>Modded Craftoria</strong><br><small class="text-muted">mmc.rcfg.xyz</small></td>
+    <td id="status-craftoria"><button class="btn btn-secondary btn-sm">Unknown</button></td>
+    <td id="players-craftoria"><div class="d-flex align-items-center"><span class="me-2">0/0</span><div class="progress flex-grow-1"><div class="progress-bar" style="width:0%;"></div></div></div></td>
+    <td id="map-craftoria">-</td>
+    <td><button class="btn btn-primary btn-sm connect-btn" data-ip="mmc.rcfg.xyz">Connect</button></td>
+  </tr>
+  <tr id="row-cs2">
+    <td><strong>Counter-Strike 2</strong><br><small class="text-muted">135.181.19.52:27020</small></td>
+    <td id="status-cs2"><button class="btn btn-secondary btn-sm">Unknown</button></td>
+    <td id="players-cs2"><div class="d-flex align-items-center"><span class="me-2">0/0</span><div class="progress flex-grow-1"><div class="progress-bar" style="width:0%;"></div></div></div></td>
+    <td id="map-cs2">-</td>
+    <td><button class="btn btn-primary btn-sm connect-btn" data-ip="connect 135.181.19.52:27020">Connect</button></td>
+  </tr>
+  <tr id="row-arma">
+    <td><strong>Arma Reforger</strong><br><small class="text-muted">135.181.19.52:2302</small></td>
+    <td id="status-arma"><button class="btn btn-secondary btn-sm">Unknown</button></td>
+    <td id="players-arma"><div class="d-flex align-items-center"><span class="me-2">0/0</span><div class="progress flex-grow-1"><div class="progress-bar" style="width:0%;"></div></div></div></td>
+    <td id="map-arma">-</td>
+    <td><button class="btn btn-primary btn-sm connect-btn" data-ip="135.181.19.52:2302">Connect</button></td>
+  </tr>
+</tbody>
+
+      </table>
+    </div>
+  </div>
 </section>
 </main>
 
 
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-<footer class="footer text-center text-light py-3">
-  © 2024 RCFG — All Rights Reserved.
+<footer class="bg-dark text-center py-3">
+  <div class="container">
+    <small class="text-muted text-white">&copy; 2025 RCFG Hosting & Services</small>
+  </div>
 </footer>
+<script src="/assets/js/status-table.js"></script>
 </body>
 </html>
