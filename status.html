@@ -1,80 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RCFG | Server Status</title>
-  <link rel="icon" href="assets/images/favicon.png" type="image/png"/>
-  <link rel="stylesheet" href="assets/css/style.css"/>
+  <meta charset="UTF-8">
+  <title>RCFG Hosting & Services — Status</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="shortcut icon" type="image/png" href="favicon.png">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TW684LSV8D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TW684LSV8D');
+</script>
+
 </head>
-<body>
-  <header>
-    <img src="assets/images/oie_transparent.png" class="logo" alt="RCFG Logo"/>
-    
-<nav>
-  <button class="nav-btn" onclick="location.href='index.html'">Home</button>
-  <button class="nav-btn" onclick="location.href='pricing.html'">Pricing</button>
-  <button class="nav-btn" onclick="location.href='contact.html'">Contact</button>
-  <button class="nav-btn" onclick="window.open('https://github.com/RCFG-HS', '_blank')">Docs</button>
-  <button class="nav-btn" onclick="location.href='blog.html'">Blog</button>
-  <button class="nav-btn" onclick="location.href='status.html'">Server Status</button>
-  <button class="nav-btn" onclick="window.open('https://panel.rcfg.xyz', '_blank')">Panel</button>
-  <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
+<body class="bg-dark text-light" class="bg-dark text-light">
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="assets/img/oie_transparent.png" alt="Logo" style="height:40px;">
+      <span class="ms-2 text-white">RCFG Hosting & Services</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="status.html">Status</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://panel.rcfg.xyz" target="_blank">Panel</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
-  </header>
-  <main>
-    <section class="page-section server-running">
-      <h2>Minecraft</h2>
-      <p class="server-desc">Earth map with separate pre-generated worlds for resources. Build towns with Towny plugin!</p>
-      <p><strong>Host:</strong> mc.rcfg.xyz</p>
-      <p><strong>Version:</strong> 1.21.6</p>
-      <p><strong>Status:</strong> <span class="status-indicator running"></span>Running</p>
-    </section>
-    <section class="page-section server-running">
-      <h2>Arma Reforger</h2>
-      <p class="server-desc">NATO vs RUS on Everon with custom mods, enhanced FPS and stability.</p>
-      <p><strong>Host:</strong> arma.rcfg.xyz</p>
-      <p><strong>Version:</strong> latest</p>
-      <p><strong>Status:</strong> <span class="status-indicator running"></span>Running</p>
-    </section>
-    <section class="page-section server-running">
-      <h2>Counter Strike 2</h2>
-      <p class="server-desc">High-capacity competitive arenas with custom maps for pro-level matches.</p>
-      <p><strong>Host:</strong> 46.4.224.70:27015</p>
-      <p><strong>Version:</strong> latest</p>
-      <p><strong>Status:</strong> <span class="status-indicator running"></span>Running</p>
-    </section>
-    <section class="page-section server-crashed">
-      <h2>Garry's Mod</h2>
-      <p class="server-desc">Sandbox physics with prop hunt and roleplay mods.</p>
-      <p><strong>Host:</strong> gmod.rcfg.xyz</p>
-      <p><strong>Version:</strong> TBD</p>
-      <p><strong>Status:</strong> <span class="status-indicator crashed"></span>Crashed</p>
-    </section>
-    <section class="page-section server-crashed">
-      <h2>Unturned</h2>
-      <p class="server-desc">Survival horror map with crafting and base building.</p>
-      <p><strong>Host:</strong> TBD</p>
-      <p><strong>Version:</strong> TBD</p>
-      <p><strong>Status:</strong> <span class="status-indicator crashed"></span>Crashed</p>
-    </section>
-    <section class="page-section server-crashed">
-      <h2>Minecraft Modded</h2>
-      <p class="server-desc">Tech & magic modpack with automation and spells.</p>
-      <p><strong>Host:</strong> TBD</p>
-      <p><strong>Version:</strong> TBD</p>
-      <p><strong>Status:</strong> <span class="status-indicator crashed"></span>Crashed</p>
-    </section>
-    <section class="page-section server-crashed">
-      <h2>Counter Strike Source</h2>
-      <p class="server-desc">Classic maps with fast-paced gameplay.</p>
-      <p><strong>Host:</strong> TBD</p>
-      <p><strong>Version:</strong> TBD</p>
-      <p><strong>Status:</strong> <span class="status-indicator crashed"></span>Crashed</p>
-    </section>
-  </main>
-  <footer>
-    <a href="documentation.html">View Documentation</a><p>&copy; 2025 RCFG Hosting & Services. All rights reserved.</p>
-  </footer>
+
+
+<main class="container py-5">
+<section class="container py-5">
+  <h2 class="display-4 fw-bold mb-4 text-info">Server Status</h2>
+  <div class="alert alert-info">Status dashboard coming soon!</div>
+</section>
+</main>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<footer class="footer text-center text-light py-3">
+  © 2024 RCFG — All Rights Reserved.
+</footer>
 </body>
 </html>
