@@ -61,6 +61,15 @@ def set_cache(key: str, val: Status):
 async def ping_minecraft(host: str, port: int) -> Status:
     try:
         srv = JavaServer(host, port)
+
+        loop = asyncio.get_event_loop()
+        stat = await loop.run_in_executor(None, srv.status)
+        return Status(
+            online=True,
+            players=stat.players.online,
+            max_players=stat.players.max,
+        )
+
         stat = await asyncio.get_event_loop().run_in_executor(None, srv.status)
         return Status(online=True,
                       players=stat.players.online,
@@ -72,6 +81,13 @@ async def ping_minecraft(host: str, port: int) -> Status:
 async def ping_source(host: str, port: int) -> Status:
     try:
         loop = asyncio.get_event_loop()
+
+        info = await loop.run_in_executor(None, lambda: a2s.info((host, port)))
+        return Status(
+            online=True,
+            players=info.player_count,
+            max_players=info.max_players,
+        )
         info = await loop.run_in_executor(
             None, lambda: a2s.info((host, port))
         )
