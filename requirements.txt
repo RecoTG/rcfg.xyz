@@ -1,5 +1,6 @@
 fastapi
 uvicorn
 mcstatus
-valve-source-query
+python-a2s
 pydantic
+python-multipart
