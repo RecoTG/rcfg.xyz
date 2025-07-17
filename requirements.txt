@@ -3,3 +3,4 @@ uvicorn
 mcstatus
 python-a2s
 pydantic
+python-multipart
