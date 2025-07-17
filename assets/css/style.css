@@ -1,0 +1,138 @@
+
+:root {
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --bg: #121212;
+  --card-bg: #1e1e1e;
+  --text: #e0e0e0;
+  --muted: #999999;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+.navbar, footer {
+  background: var(--card-bg);
+}
+.navbar .nav-link, .navbar-brand {
+  color: var(--text);
+}
+.navbar .nav-link:hover {
+  color: var(--primary);
+}
+.hero {
+  background: var(--card-bg);
+  padding: 4rem 0;
+  color: var(--text);
+}
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.card {
+  background: var(--card-bg);
+  border: none;
+  border-radius: .5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.5);
+}
+footer small {
+  color: var(--muted);
+}
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+.btn-primary:hover {
+  background-color: darken(var(--primary), 10%);
+}
+
+
+
+
+
+:root {
+  --card-bg: #2c2f33;
+  --card-text: #f4f7fa;
+}
+.card {
+  background: var(--card-bg) !important;
+}
+.card h1, .card h2, .card h3, .card h4, .card h5,
+.card p, .card .card-text, .card .lead,
+.card .btn, .card a {
+  color: var(--card-text) !important;
+}
+.list-group-item {
+  background: var(--card-bg) !important;
+  color: var(--card-text) !important;
+}
+
+
+
+img.icon {
+    width: 46px !important;
+    height: 46px !important;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+img.icon {
+    background: none !important;
+    padding: 0 !important;
+}
+.avatar-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.avatar-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+.avatar-button img.icon {
+  margin-left: 0.25rem;
+}
+
+body, .container, .card, section, .navbar, footer {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+}
+.table, .table th, .table td {
+  color: #e0e0e0 !important;
+}
+
+/* Persistent dark mode overrides */
+body, .container-fluid, .card, .navbar, footer, section, .table-responsive, table {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+}
+.table, .table th, .table td {
+  border-color: rgba(255,255,255,0.1) !important;
+}
+
+/* -- Table Dark Mode ------------------------------------------------------- */
+.table-responsive, .table {
+  background-color: #1e1e1e !important;
+}
+.table th, .table td {
+  background-color: #2a2a2a !important;
+  border-color: rgba(255,255,255,0.1) !important;
+}
+
+/* -- Summary Text ---------------------------------------------------------- */
+#gs-summary {
+  color: #dddddd !important;
+}
+
+/* -- Footer Text ----------------------------------------------------------- */
+footer, footer * {
+  color: #dddddd !important;
+}
+
+/* Make IPs in table very light gray */
+.table td small.text-muted {
+  color: #eeeeee !important;
+}

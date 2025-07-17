@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RCFG Hosting & Services</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/"><img src="/assets/img/logo.png" alt="Logo" style="height:32px;"> <span class="text-white">RCFG Hosting & Services</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navCollapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-white" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="/team.html">Team</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="/pricing.html">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="/status.html">Status</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="https://panel.rcfg.xyz">Panel</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-5"><h1 class="text-center mb-4 text-white">Pricing Plans</h1><div class="row gx-4 gy-4"><div class="col-md-4"><div class="card text-center p-3"><h3 class="text-white">Basic</h3><p class="text-secondary">Just a Server</p><p class="display-6">$20</p><a href="https://panel.rcfg.xyz" class="btn btn-primary">Get Started</a></div></div><div class="col-md-4"><div class="card text-center p-3"><h3 class="text-white">Advanced</h3><p class="text-secondary">Server + Plugin</p><p class="display-6">$30</p><a href="https://panel.rcfg.xyz" class="btn btn-primary">Get Started</a></div></div><div class="col-md-4"><div class="card text-center p-3"><h3 class="text-white">Pro</h3><p class="text-secondary">Multiple Servers/Plugins</p><p class="display-6">$50</p><a href="https://panel.rcfg.xyz" class="btn btn-primary">Get Started</a></div></div></div></main>
+<section id="request-form" class="container py-5">
+  <h2 class="text-white mb-4">Request a Custom Quote</h2>
+  <form action="https://form.example.com/submit" method="POST">
+    <div class="mb-3">
+      <label for="gameServer" class="form-label text-white">Game Server</label>
+      <input type="text" class="form-control" id="gameServer" name="gameServer" placeholder="e.g. Minecraft">
+    </div>
+    <div class="mb-3">
+      <label for="plugins" class="form-label text-white">Number of Plugins</label>
+      <input type="number" class="form-control" id="plugins" name="plugins" min="0" value="0">
+    </div>
+    <div class="mb-3">
+      <label for="pluginDetails" class="form-label text-white">Plugin Details</label>
+      <textarea class="form-control" id="pluginDetails" name="pluginDetails" rows="3"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="allocation" class="form-label text-white">Server Allocation</label>
+      <input type="text" class="form-control" id="allocation" name="allocation" placeholder="e.g. 4GB RAM">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Request</button>
+  </form>
+</section>
+
+
+<footer class="bg-dark text-center py-3">
+  <div class="container">
+    <small class="text-muted text-white">&copy; 2025 RCFG Hosting & Services</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/status.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+
+/* Ensure content below fixed navbar */
+body {
+  padding-top: 70px;
+}
+
+/* Footer styling */
+.footer {
+  border-top: 1px solid #333;
+  background: #0d1117;
+}
