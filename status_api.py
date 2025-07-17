@@ -16,18 +16,36 @@ app.add_middleware(
 )
 
 SERVERS = {
-    "minecraft":  {"host": "mc.rcfg.xyz",    "port": 25565, "type": "minecraft"},
-    "craftoria":  {"host": "46.4.224.70",     "port": 25580, "type": "minecraft"},
-    "cs2":        {"host": "135.181.19.52",   "port": 27020, "type": "source"},
-    "arma":       {"host": "135.181.19.52",   "port": 2001,  "type": "tcp"},
+    "minecraft": {
+        "host": "mc.rcfg.xyz",
+        "port": 25565,
+        "type": "minecraft",
+    },
+    "craftoria": {
+        "host": "46.4.224.70",
+        "port": 25580,
+        "type": "minecraft",
+    },
+    "cs2": {
+        "host": "135.181.19.52",
+        "port": 27020,
+        "type": "source",
+    },
+    "arma": {
+        "host": "135.181.19.52",
+        "port": 2001,
+        "type": "tcp",
+    },
 }
-_cache = {}
+_cache: dict[str, dict] = {}
 TTL = 30  # seconds
 
+
 class Status(BaseModel):
-    online:      bool
-    players:     int = 0
+    online: bool
+    players: int = 0
     max_players: int = 0
+
 
 def get_cached(key: str):
     ent = _cache.get(key)
@@ -35,8 +53,10 @@ def get_cached(key: str):
         return ent["val"]
     return None
 
+
 def set_cache(key: str, val: Status):
     _cache[key] = {"val": val, "ts": time()}
+
 
 async def ping_minecraft(host: str, port: int) -> Status:
     try:
@@ -45,17 +65,22 @@ async def ping_minecraft(host: str, port: int) -> Status:
         return Status(online=True,
                       players=stat.players.online,
                       max_players=stat.players.max)
-    except:
+    except Exception:
         return Status(online=False)
+
 
 async def ping_source(host: str, port: int) -> Status:
     try:
-        info = await asyncio.get_event_loop().run_in_executor(None, lambda: a2s.info((host, port)))
+        loop = asyncio.get_event_loop()
+        info = await loop.run_in_executor(
+            None, lambda: a2s.info((host, port))
+        )
         return Status(online=True,
                       players=info.player_count,
                       max_players=info.max_players)
-    except:
+    except Exception:
         return Status(online=False)
+
 
 async def ping_tcp(host: str, port: int) -> Status:
     try:
@@ -63,8 +88,9 @@ async def ping_tcp(host: str, port: int) -> Status:
         writer.close()
         await writer.wait_closed()
         return Status(online=True)
-    except:
+    except Exception:
         return Status(online=False)
+
 
 @app.get("/api/status/{srv_name}", response_model=Status)
 async def get_status(srv_name: str):
